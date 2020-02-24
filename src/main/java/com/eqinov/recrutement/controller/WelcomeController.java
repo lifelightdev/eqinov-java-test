@@ -23,7 +23,7 @@ import com.eqinov.recrutement.repository.SiteRepository;
 import com.eqinov.recrutement.utils.DateUtils;
 
 /**
- * Controller Spring permettant l'affichage des données dans la seule vue de
+ * Controller Spring permettant l'affichage des donnÃ©es dans la seule vue de
  * l'application
  * 
  * @author Guillaume SIMON - EQINOV
@@ -40,7 +40,7 @@ public class WelcomeController {
 	private DataPointRepository dataPointRepository;
 
 	/**
-	 * Point d'entrée de la vue, page d'accueil de l'application
+	 * Point d'entrÃ©e de la vue, page d'accueil de l'application
 	 */
 	@GetMapping("/")
 	public String main(Model model) {
@@ -53,11 +53,11 @@ public class WelcomeController {
 	}
 
 	/**
-	 * Rafraichi le contenu de la page sur changement d'année
+	 * Rafraichi le contenu de la page sur changement d'annÃ©e
 	 * 
-	 * @param year  l'année
-	 * @param model model transportant les données
-	 * @return le fragment a retourné
+	 * @param year  l'annÃ©e
+	 * @param model model transportant les donnÃ©es
+	 * @return le fragment a retournÃ©
 	 */
 	@GetMapping("/view/refresh")
 	public String refresh(@RequestParam Integer year, Model model) {
@@ -69,12 +69,12 @@ public class WelcomeController {
 	}
 
 	/**
-	 * Méthode interne permettant d'ajouter les données du site pour l'année à
+	 * MÃ©thode interne permettant d'ajouter les donnÃ©es du site pour l'annÃ©e Ã 
 	 * afficher
 	 * 
-	 * @param site        site à afficher
-	 * @param currentYear année sélectionnée
-	 * @param model       model transportant les données
+	 * @param site        site Ã  afficher
+	 * @param currentYear annÃ©e sÃ©lectionnÃ©e
+	 * @param model       model transportant les donnÃ©es
 	 */
 	private void initModel(Site site, Integer currentYear, Model model) {
 		Integer minYear = dataPointRepository.findTopBySiteOrderByTimeAsc(site).getTime().getYear();
@@ -87,9 +87,9 @@ public class WelcomeController {
 	}
 
 	/**
-	 * Retourne les points de consommation d'une année au format json pour highstock
+	 * Retourne les points de consommation d'une annÃ©e au format json pour highstock
 	 * 
-	 * @param year année
+	 * @param year annÃ©e
 	 * @return
 	 */
 	@GetMapping(value = "/data/conso", produces = MediaType.APPLICATION_JSON_VALUE)

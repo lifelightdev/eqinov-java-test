@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 /**
- * Entité Jpa représentant un site client physique
+ * EntitÃ© Jpa reprÃ©sentant un site client physique
  * 
  * @author Guillaume SIMON - EQINOV
  * @since 24 janv. 2020

@@ -9,7 +9,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 /**
- * Entité Jpa listant les points de consommation à pas 10 minutes d'un site client
+ * EntitÃ© Jpa listant les points de consommation Ã  pas 10 minutes d'un site client
  * 
  * @author Guillaume SIMON - EQINOV
  * @since 24 janv. 2020
